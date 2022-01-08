@@ -2,26 +2,32 @@ var app = new Vue({
   el: '#app',
   data: {
     apiURL: 'http://localhost/php-ajax-dischi/db/index.php?',
-    disks :'',
+    disks :[],
     diskGenre : '',
     newUrl : '',
     genreChosed:'',
   },
   methods:{
     getApi(url){
-      axios.get(url).then(r=>{
+      axios.get(url)
+      .then(r=>{
         this.disks = r.data
+      })
+      .catch(e=>{
+        console.log('errore --->>>>> ',e)
       })
     },
     getGenre(){
+      console.log(event.originalTarget.value)
       this.genreChosed=''
       this.newUrl = this.apiURL
         if(event.originalTarget.value!=="ALL"){
-          this.diskGenre = event.originalTarget.value    
+          this.diskGenre = event.originalTarget.value
           this.newUrl=this.apiURL+"genre="+this.diskGenre
           this.genreChosed='chosed',
           this.getApi(this.newUrl)
         }
+         
         this.getApi(this.newUrl)
     },
   },

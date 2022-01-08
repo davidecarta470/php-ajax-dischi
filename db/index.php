@@ -9,7 +9,7 @@ if(!empty($_GET)){
         array_push($filteredDisk,$disk);
     }
   }
-}else if(empty($_GET)||$_GET["genre"]==="ALL"){
+}else{
   $filteredDisk = $disks;
 }  
 
