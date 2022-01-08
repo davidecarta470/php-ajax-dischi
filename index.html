@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Outfit&family=Poppins&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="header-left">
+        <h1>MUSIC</h1>
+      </div>
+      <div class="header-right">
+        <span><strong>GENERE : </strong></span> 
+        <select name="" id="" @change="getGenre()">
+          <option value="ALL">ALL</option>
+          <option value="Rock">Rock</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Pop">Pop</option>
+          <option value="Metal">Metal</option>
+        </select>
+      </div>
+    </header>
+    <main>
+      <div class="items">
+        <div class="item" v-for="disk in disks">
+          <img :src="disk.poster" alt="">
+          <h2> {{disk.title}}</h2>
+          <h3> {{disk.author}}</h3>
+          <p>{{disk.year}}</p>
+          <p :class="genreChosed">{{disk.genre}}</p>
+          
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- js -->
+  <script src="script.js"></script>
+</html>

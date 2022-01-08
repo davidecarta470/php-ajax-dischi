@@ -1,0 +1,51 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: 'Acme', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  background-color: rgb(26, 26, 26);
+  color:rgb(255, 255, 255);
+}
+
+/* ------------------ */
+header{
+  height: 80px;
+  background-color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+
+
+/* main--------------------- */
+.items{
+  width:80%;
+  margin:auto;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.item{
+  text-align: center;
+  margin:20px;
+  width: 200px;
+
+}
+.item img{
+  width:100%;
+}
+
+
+.chosed {
+  color:red;
+  font-size:40px;
+ 
+}
