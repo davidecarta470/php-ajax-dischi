@@ -17,7 +17,8 @@
         <h1>MUSIC</h1>
       </div>
       <div class="header-right">
-        <span><strong>GENERE : </strong></span> 
+        <div>
+          <span><strong>GENERE : </strong></span> 
         <select name="" id="" @change="getGenre()">
           <option value="ALL">ALL</option>
           <option value="Rock">Rock</option>
@@ -25,10 +26,25 @@
           <option value="Pop">Pop</option>
           <option value="Metal">Metal</option>
         </select>
+        </div>
+        <div>
+          <span><strong>YEAR</strong> : </strong></span> 
+          <select name="" id="" @change="getYear()">
+            <option value="ALL">ALL</option>
+            <option value="2020">2020-2030</option>
+            <option value="2010">2010-2020</option>
+            <option value="2000">2000-2010</option>
+            <option value="1990">1990-2000</option>
+            <option value="1980">1980-1990</option>
+            <option value="1970">1970-1980</option>
+           
+          </select>
+        </div>
       </div>
     </header>
     <main>
-      <div class="items">
+ 
+      <div  class="items">
         <div class="item" v-for="disk in disks">
           <img :src="disk.poster" alt="">
           <h2> {{disk.title}}</h2>
